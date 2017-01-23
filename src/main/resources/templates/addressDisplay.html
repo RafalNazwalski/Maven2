@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lab 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<b><span th:text="'Twoj adres:'"></span></b>
+	<br />
+	<span th:text="'Miejscowosc: ' + ${addressMiejscowosc}"></span>
+	<br />
+	<span th:text="'Ulica: ' + ${addressUlica} + ' ' + ${addressNumerDomu}"></span>
+</body>
+</html>

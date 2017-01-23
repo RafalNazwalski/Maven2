@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lab 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+    .container {
+        width: 250px;
+        clear: both;
+    }
+    .container input {
+        width: 90%;
+        clear: both;
+    }
+    .error{
+    	color:red;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+	<form th:object="${address}" method="POST" th:action="@{/addressForm}">
+		<p> <b> <span th:text="${formName}"></span> </b> </p> 
+		<span th:text="Miejscowosc"></span> 
+			<input type="text" name="miejscowosc" th:value="*{miejscowosc}" />
+		<span th:text="Ulica"></span>
+			<input type="text" name="ulica" th:value="*{ulica}" />
+		<span th:text="'Numer domu'"></span>
+			<input type="text" name="numerDomu" th:value="*{numerDomu}" />
+		<button type="submit">Przeslij</button>
+	</form>
+	<br/>
+	<b><span th:text="${dateTime}"></span></b>
+	<br />
+	</div>
+	<div class="error">
+		<br />
+		<b><span th:text="${errorMessage}"></span></b>
+	</div>
+</body>
+</html>

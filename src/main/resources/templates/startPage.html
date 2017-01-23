@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lab 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+    .container {
+        width: 250px;
+        clear: both;
+    }
+    .error{
+    	color:red;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+	<br /><br />
+	<button onclick="location.href = 'http://localhost:8080/firstForm'" type="button">Student</button>
+	<br /><br />
+	<button onclick="location.href = 'http://localhost:8080/addressForm'" type="button">Adres</button>
+</div>
+	<div class="error">
+		<br />
+		<b><span th:text="${errorMessage}"></span></b>
+	</div>
+</body>
+</html>
