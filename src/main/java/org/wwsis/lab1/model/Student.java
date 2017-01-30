@@ -7,7 +7,16 @@ public class Student {
 	private int age;
 	private String email;
 	private String address;
+	private String dataUrodzenia;
 	
+	public String getDataUrodzenia() {
+		return dataUrodzenia;
+	}
+
+	public void setDataUrodzenia(String dataUrodzenia) {
+		this.dataUrodzenia = dataUrodzenia;
+	}
+
 	public int getAge() {
 		return age;
 	}

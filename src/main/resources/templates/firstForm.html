@@ -5,12 +5,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style type="text/css">
     .container {
-        width: 250px;
+        width: 260px;
         clear: both;
     }
     .container input {
         width: 90%;
         clear: both;
+    }
+    .buttonGreen{
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
     }
     .error{
     	color:red;
@@ -20,6 +30,7 @@
 <body>
 <div class="container">
 	<form th:object="${student}" method="POST" th:action="@{/firstForm}">
+		<span th:text="${session.s1}"></span>
 		<p> <b> <span th:text="${formName}"></span> </b> </p> 
 		<span th:text="Imie"></span> 
 			<input type="text" name="firstName" th:value="*{firstName}" />
@@ -31,7 +42,9 @@
 			<input type="text" name="email" th:value="*{email}" />
 		<span th:text="Adres"></span>
 			<input type="text" name="address" th:value="*{address}" />
-		<button type="submit">Przeslij</button>
+		<span th:text="'Data Urodzenia'"></span>
+			<input type="text" name="dataUrodzenia" th:value="*{dataUrodzenia}" />	
+		<button class="buttonGreen">Przeslij</button>
 	</form>
 	<br/>
 	<b><span th:text="${dateTime}"></span></b>
